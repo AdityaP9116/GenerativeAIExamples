@@ -85,6 +85,11 @@ services:
       OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       # enable observability in rag playground
       ENABLE_TRACING: false
+      #RIVA Environmental variables
+      RIVA_API_URI: ${RIVA_API_URI:-:50051}
+      RIVA_API_KEY: ${RIVA_API_KEY:-}
+      RIVA_FUNCTION_ID: ${RIVA_FUNCTION_ID:-}
+      TTS_SAMPLE_RAGE: ${TTS_SAMPLE_RAGE:-48000}
     ports:
     - "8090:8090"
     expose:
